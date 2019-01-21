@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+	<style type="text/css">
+	.fullBackground {
+		background-position: center center;
+		background-attachment: fixed;
+		background-size: cover;
+		position: absolute;
+		padding: 0;
+		width: 100%;
+		height: 100%;
+		top:0;
+		left: 0;
+	}
+
+	.container {
+		background: #eee;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 30%;
+		height: 10%;
+		border-radius: 4px;
+		text-align: center;
+	}
+
+	.caption {
+		font-family: Comfortaa;
+		font-size: 30pt;
+		text-transform: uppercase;
+		color: #fff;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	.caption:after {
+		content:"\A";
+		width:10px;
+		height:10px;
+		border-radius:50%;
+		background: #00bbeb;
+		display: inline-block;
+		margin: 0 0 -2px;
+	}
+	.splash {
+		background: #000;
+		max-height: 25%;
+		width: 80%;
+		margin: auto;
+		position: absolute;
+		top: 33.33%; left: 0; bottom: 0; right: 0;
+		text-align: center;
+		text-transform: uppercase;
+	}
+	.splash-head {
+		font-size: 20px;
+		font-weight: bold;
+		color: white;
+		border: 3px solid white;
+		padding: 1em 1.6em;
+		font-weight: 100;
+		border-radius: 5px;
+		line-height: 1em;
+	}
+	.splash-subhead {
+		color: white;
+		letter-spacing: 0.05em;
+		opacity: 0.8;
+	}
+
+</style>
+</head>
+<body>
+	<div class="fullBackground"></div>
+
+	<div class="splash-container">
+		<div class="splash">
+			<h1 class="splash-head">Big Bold Text</h1>
+			<p class="splash-subhead">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+			</p>
+			<p>
+				<a href="http://purecss.io" class="pure-button pure-button-primary">Get Started</a>
+			</p>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+	<script type="text/javascript" src="assets/js/fullclip.min.js"></script>
+	<script type="text/javascript">
+		$('.fullBackground').fullClip({
+			images: ['assets/images/background/dota2.jpg', 'assets/images/background/csgo.jpg', 'assets/images/background/pubg.jpg'],
+			transitionTime: 2000,
+			wait: 5000
+		})
+	</script>
+</body>
+</html>
